@@ -9,7 +9,9 @@ module.exports = function (passport) {
         clientID:
           "317386116551-kaph0lfnihqaekqnc6q6er6if329dcer.apps.googleusercontent.com",
         clientSecret: "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",
-        callbackURL: "/auth/google/callback",
+        callbackURL:
+          "https://storyboard2021.herokuapp.com/auth/google/callback",
+        proxy: true,
       },
       async (accessToken, refreshToken, profile, done) => {
         const newUser = {
